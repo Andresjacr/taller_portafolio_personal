@@ -8,7 +8,7 @@
   
   /* Columnas */
 .columna {
-    background: #4bd5df;
+    background: #b3c9df;
     padding: 20px;
     border-radius: 12px;
   }
@@ -25,12 +25,13 @@
   
   /* Titulos */
 .titulo {
-    color : #ffffff;
+    color : #000000;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-top: 20px;
     font-size: 18px;
     text-align: center;
+    font-family: sans-serif;
   }
 .personal{background:#485db886 ;}
 .contacto{background:#485db886 ;}
@@ -41,19 +42,22 @@
 .conocimientos{background:#485db886 ;}
 .idiomas{background:#485db886 ;}
 .video{background:#485db886 ;}
-  
+.declaracion{background:#485db886 ;}
   /* Encabezados */
 
 h1 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+    border-radius: 100px;
+    color: aliceblue;
   }
 
 body {
     font-family: Arial, sans-serif;
     background: #f0f0f0;
-    color: #333;
+    color: #000000;
   }
   
   /* Enlaces */
@@ -64,19 +68,111 @@ a {
 
 img {
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 4px solid #ada9ec;
     box-shadow: 0 0 10px rgba(0,0,0,0,2);
     width: 150px;
     height: 150px;
     object-fit: cover;
 }
-  
+
+
 section {
-    background: rgb(247, 7, 7);
+    background: rgb(161, 255, 177);
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
   }
     
-    
+h2 {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+
+/* Este contenedor reserva el espacio en tu columna, sin importar la animación */
+.flip-container {
+  perspective: 1000px; 
+  width: 150px; 
+  height: 150px; 
+  margin: 0 auto 10px; 
+}
+/* El elemento que va a girar */
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s; 
+  transform-style: preserve-3d; 
+}
+/* Cuando el mouse se posa sobre el contenedor, el flipper gira 180 grados */
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+/* Ambas caras de la tarjeta, la de adelante y la de atrás */
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+/* La cara frontal, que es tu foto original */
+.front {
+  z-index: 2;
+}
+/* La cara trasera, la que aparece al girar */
+.back {
+  transform: rotateY(180deg); 
+}
+/* Estilos para las imágenes dentro del contenedor de volteo */
+.perfil-foto, .perfil-foto-back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+body {
+  background-color: #a5be00; /* Color de fondo por si la imagen no carga o no cubre todo */
+  font-family: Arial, sans-serif;
+  
+  /* --- Estilos para la imagen de fondo de presentación --- */
+  background-image: url('imagenes/fondo.png'); /* La ruta a tu imagen */
+  background-size: cover; /* Esto hace que la imagen cubra todo el espacio sin distorsionarse */
+  background-position: center center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita si no cubre todo */
+  background-attachment: fixed; /* Opcional: Hace que la imagen de fondo se quede fija al hacer scroll */
+  /* --------------------------------------------------- */
+}
+
+/* Si tienes un fondo para el div.columna.centro, deberías quitarlo para que se vea el fondo del body */
+.div.columna.centro {
+  /* background-color: #aebfd6; <--- Comenta o quita esta línea si quieres que se vea el fondo del body */
+  background-color: rgba(174, 191, 214, 0.7); /* O puedes usar un color con transparencia */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Si quieres que las columnas tengan un fondo ligeramente transparente para que se vea la imagen de fondo */
+.div.columna.izquierda,
+.div.columna.derecha {
+  /* background-color: #aebfd6; */ /* Comenta o ajusta este color si ya lo tienes */
+  background-color: rgba(174, 191, 214, 0.7); /* Ejemplo con transparencia */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ /*esto ajusta el video a la columna*/
+ video {
+    max-width: 50%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
