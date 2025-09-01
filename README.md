@@ -32,6 +32,9 @@ El proyecto se organiza en una carpeta principal con los siguientes archivos y s
 |   |-- fondo-presentacion.jpg
 |   |-- whatsapp.png
 |   |-- github.png
+
+
+Este es el link de la pagina:  https://portafolioandres25.netlify.app/
 |   |-- etc...
 |-- /video/
 |   |-- tu-video.mp4
